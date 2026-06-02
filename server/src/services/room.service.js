@@ -113,6 +113,33 @@ export async function requireRoomByCode(code) {
   return room;
 }
 
+export async function listRooms() {
+  const { rows } = await query(
+    `SELECT rooms.*,
+            quizzes.title AS quiz_title,
+            quizzes.description AS quiz_description,
+            COALESCE(participant_counts.participant_count, 0) AS participant_count,
+            COALESCE(participant_counts.completed_count, 0) AS completed_count
+     FROM rooms
+     JOIN quizzes ON quizzes.id = rooms.quiz_id
+     LEFT JOIN (
+       SELECT room_id,
+              COUNT(id) AS participant_count,
+              COUNT(id) FILTER (WHERE completed = TRUE) AS completed_count
+       FROM participants
+       GROUP BY room_id
+     ) AS participant_counts ON participant_counts.room_id = rooms.id
+     ORDER BY rooms.created_at DESC`
+  );
+
+  return rows.map((row) => ({
+    ...mapRoom(row),
+    quizDescription: row.quiz_description,
+    participantCount: Number(row.participant_count || 0),
+    completedCount: Number(row.completed_count || 0)
+  }));
+}
+
 export async function createRoom(input, adminUserId) {
   if (!input.quizId) {
     throw httpError(400, "quizId is required");

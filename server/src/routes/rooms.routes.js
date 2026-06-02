@@ -12,6 +12,7 @@ import {
   createRoom,
   finishRoom,
   getRoomByCode,
+  listRooms,
   requireRoomByCode,
   roomStatePayload,
   startRoom,
@@ -56,6 +57,17 @@ function enforceJoinRateLimit(ipAddress) {
     throw error;
   }
 }
+
+router.get(
+  "/",
+  authenticate,
+  requireAdmin,
+  asyncHandler(async (req, res) => {
+    res.json({
+      rooms: await listRooms()
+    });
+  })
+);
 
 router.post(
   "/",
