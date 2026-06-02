@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: quizzer-postgres
+    environment:
+      POSTGRES_DB: quizzer
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "123"
+    ports:
+      - "5432:5432"
+    volumes:
+      - quizzer_pg_data:/var/lib/postgresql/data
+
+volumes:
+  quizzer_pg_data:

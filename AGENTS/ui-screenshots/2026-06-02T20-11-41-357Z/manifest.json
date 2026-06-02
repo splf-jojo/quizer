@@ -1,0 +1,57 @@
+{
+  "baseUrl": "http://192.168.0.172:5173",
+  "apiUrl": "http://192.168.0.172:4000/api",
+  "createdAt": "2026-06-02T20:11:53.032Z",
+  "captures": [
+    {
+      "name": "01-admin-login",
+      "route": "/admin",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\01-admin-login.png"
+    },
+    {
+      "name": "02-admin-dashboard",
+      "route": "/admin",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\02-admin-dashboard.png"
+    },
+    {
+      "name": "03-admin-room-setup",
+      "route": "/admin/rooms/new/30000000-0000-4000-8000-000000000001",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\03-admin-room-setup.png"
+    },
+    {
+      "name": "04-admin-room-waiting",
+      "route": "/admin/rooms/ZKZYDE",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\04-admin-room-waiting.png"
+    },
+    {
+      "name": "05-student-join",
+      "route": "/room/ZKZYDE",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\05-student-join.png"
+    },
+    {
+      "name": "06-student-waiting",
+      "route": "/room/ZKZYDE/waiting",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\06-student-waiting.png"
+    },
+    {
+      "name": "07-admin-room-live",
+      "route": "/admin/rooms/ZKZYDE",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\07-admin-room-live.png"
+    },
+    {
+      "name": "08-student-quiz",
+      "route": "/room/ZKZYDE/quiz",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\08-student-quiz.png"
+    },
+    {
+      "name": "09-student-result",
+      "route": "/room/ZKZYDE/result",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\09-student-result.png"
+    },
+    {
+      "name": "10-admin-room-finished",
+      "route": "/admin/rooms/ZKZYDE",
+      "filePath": "C:\\work\\quizer\\AGENTS\\ui-screenshots\\2026-06-02T20-11-41-357Z\\10-admin-room-finished.png"
+    }
+  ]
+}
