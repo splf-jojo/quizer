@@ -1,4 +1,4 @@
-import { FilePlus2, ListChecks, LogOut } from "lucide-react";
+import { ClipboardList, FilePlus2, ListChecks, LogOut } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import Button from "../components/Button.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
@@ -15,7 +15,8 @@ export default function AdminProtectedLayout() {
 
   const navItems = [
     { label: t("createTest"), to: "/admin/create", icon: FilePlus2 },
-    { label: t("tests"), to: "/admin", icon: ListChecks, end: true }
+    { label: t("tests"), to: "/admin", icon: ListChecks, end: true },
+    { label: t("allTests"), to: "/admin/all-tests", icon: ClipboardList }
   ];
 
   return (

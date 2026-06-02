@@ -113,8 +113,8 @@ function DateTimeField({ disabled, label, onChange, value }) {
 function DurationField({ disabled, onChange, t, value }) {
   return (
     <label className="block text-sm font-semibold text-zinc-900">
-      {t("duration")}
-      <div className="mt-2 inline-flex h-11 overflow-hidden rounded-md border border-zinc-300 bg-white focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-100">
+      <span className="block">{t("duration")}</span>
+      <div className="mt-2 flex h-11 w-fit overflow-hidden rounded-md border border-zinc-300 bg-white focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-100">
         <input
           className="w-20 border-0 px-3 text-sm outline-none disabled:bg-zinc-100"
           type="number"
@@ -146,7 +146,7 @@ export default function QuizSettingsCard({
   return (
     <form className="space-y-4" onSubmit={onSubmit}>
       <SettingsSection icon={SlidersHorizontal} title={t("passageParameters")}>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-12 md:grid-cols-2">
           <SettingToggle
             checked={settings.showCorrectAnswers}
             disabled={locked}

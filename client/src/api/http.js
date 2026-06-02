@@ -27,6 +27,7 @@ export const api = {
   getQuizzes: (token) => request("/quizzes", { token }),
   getQuiz: (quizId, token) => request(`/quizzes/${quizId}`, { token }),
   createRoom: (body, token) => request("/rooms", { method: "POST", body, token }),
+  getRooms: (token) => request("/rooms", { token }),
   getRoom: (code) => request(`/rooms/${code}`),
   updateRoomSettings: (code, body, token) =>
     request(`/rooms/${code}/settings`, { method: "PATCH", body, token }),

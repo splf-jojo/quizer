@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import AdminAllTestsPage from "./pages/AdminAllTestsPage.jsx";
 import AdminCreateTestPage from "./pages/AdminCreateTestPage.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
 import AdminProtectedLayout from "./pages/AdminProtectedLayout.jsx";
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/admin" element={<AdminProtectedLayout />}>
         <Route index element={<AdminDashboard />} />
         <Route path="create" element={<AdminCreateTestPage />} />
+        <Route path="all-tests" element={<AdminAllTestsPage />} />
       </Route>
       <Route path="/admin/rooms/new/:quizId" element={<AdminRoomSetupPage />} />
       <Route path="/admin/rooms/:code" element={<AdminRoomPage />} />
